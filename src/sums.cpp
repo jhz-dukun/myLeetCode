@@ -4,6 +4,11 @@
  * Introduce : to make sevral nums add sums
 **********************************************************/
 
+#include "interface.h"
+
+
+//Sums::Sums(){}
+
 /*算法可用，但是针对大数组输入，时间效率太低*/
 vector<int> twoSum1(vector<int>& nums, int target){
        int i = 0;
@@ -67,3 +72,31 @@ vector<int> twoSum2(vector<int>& nums, int target){
 
     return result;
 }
+
+
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2){
+    ListNode* result = new ListNode(0);
+    ListNode* tmp = result;
+    int carry = 0,sum = 0;
+    while((l1 != NULL) || (l2 != NULL) || carry){
+        sum += carry;
+        carry = 0;
+        if(l1 != NULL){
+            sum += l1->val;
+            l1 = l1->next;
+        }
+        if(l2 != NULL){
+            sum += l2->val;
+            l2 = l2->next;
+        }
+        if(sum > 9){
+            carry = 1;
+            sum -= 10;
+        }
+        tmp->next = new ListNode(sum);
+        sum = 0;
+        tmp = tmp->next;
+    }
+    return result->next;
+}
+

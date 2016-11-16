@@ -10,7 +10,11 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    src/sums.cpp
+    src/sums.cpp \
+    lengthOfLongestSubstring.cpp
 
 HEADERS += \
     include/interface.h
+
+INCLUDEPATH += \
+    include/
