@@ -18,6 +18,7 @@ struct ListNode {
 
 //#define vector<int>  vint
 
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
 int lengthOfLongestSubstring(string s);
 vector<int> twoSum1(vector<int>& nums, int target);
 vector<int> twoSum2(vector<int>& nums, int target);

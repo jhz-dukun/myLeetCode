@@ -40,11 +40,14 @@ int main(int argc, char *argv[])
 
     cout<<"hello, world!"<<endl;
 
-    string s = "au";
-    //cout<<s.length()<<endl;
-    //string::size_type size = s.find("u");
-    //cout<<(size < s.length()? 1:0)<<endl;
-    int result = lengthOfLongestSubstring(s);
+    vector<int> nums1;
+    vector<int> nums2;
+    nums1.push_back(1);
+    nums1.push_back(2);
+    nums2.push_back(3);
+    nums2.push_back(4);
+
+    double result = findMedianSortedArrays(nums1,nums2);
     cout<<result<<endl;
 
     return a.exec();

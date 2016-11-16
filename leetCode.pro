@@ -11,7 +11,8 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     src/sums.cpp \
-    lengthOfLongestSubstring.cpp
+    lengthOfLongestSubstring.cpp \
+    src/findmediansortedarrays.cpp
 
 HEADERS += \
     include/interface.h
